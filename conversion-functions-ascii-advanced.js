@@ -10,8 +10,11 @@ Consult documentation on how to utilize the following methods:
 /* Base 2 to base 16 */
 function binaryToHexadecimal(blob) {
   // Base 2 to base 10
-  let newInput = blob.split("").slice(2).join("");
-  let mid = parseInt(newInput, 2);
+  let mid = parseInt(blob.slice(2), 2);
+  // Or:
+  // let newInput = blob.split("").slice(2).join("");
+  // let mid = parseInt(newInput, 2);
+
   // Base 10 to base 16
   return "0x" + mid.toString(16);
 }
